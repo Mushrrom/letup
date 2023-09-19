@@ -78,6 +78,12 @@ async function update() {
         details: lastTrack.name,
         state: `by ${lastTrack.artist}`,
         application_id: Constants.APPLICATION_ID,
+        buttons: [
+          {
+            url: lastTrack.url,
+            label: "View Song"
+          }
+        ]
     } as Activity;
 
     pluginState.lastTrackUrl = lastTrack.url;
